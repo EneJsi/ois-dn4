@@ -4,7 +4,8 @@ var queryUrl = baseUrl + '/query';
 
 var username = "ois.seminar";
 var password = "ois4fri";
-
+//
+var random;
 function getSessionId() {
     var response = $.ajax({
         type: "POST",
