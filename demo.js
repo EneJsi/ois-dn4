@@ -4,7 +4,7 @@ var queryUrl = baseUrl + '/query';
 
 var username = "ois.seminar";
 var password = "ois4fri";
-//
+// https://www.quandl.com/c/health/mean-bmi-kg-m2-age-standardized-estimate-male-who-by-country
 var random;
 function getSessionId() {
     var response = $.ajax({
