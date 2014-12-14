@@ -255,8 +255,7 @@ var femaleJsonBMI = (function () {
 })(); 
 
 
-console.log(sloBMI);
-console.log(sloBMI.data[0][1]);
+
 function getSessionId() {
     var response = $.ajax({
         type: "POST",
@@ -274,7 +273,7 @@ function BmiIzracun() {
 	sessionId = getSessionId();
 
 	var ehrId = $("#preberiEHRid").val();
-
+	
 	if (!ehrId || ehrId.trim().length == 0) {
 		$("#preberiSporocilo").html("<span class='obvestilo label label-warning fade-in'>Prosim vnesite zahtevan podatek!");
 	} 
@@ -297,7 +296,6 @@ function BmiIzracun() {
 					    		for(var i in res){
 						        weight = res[i].weight;
 					    		}
-						        console.log(weight + "To je teza nazadnje dodanega")
 					    	} 
 					    },
 					    error: function() {
