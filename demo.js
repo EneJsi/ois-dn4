@@ -468,7 +468,7 @@ $(document).ready(function() {
 		$("#preberiSporocilo").html("");
 		$("#preberiEHRid").val($(this).val());
 		$("#rezultatBMI").html("")
-		$("#krogciKROGCIkrogciiiIII").html("");
+	//	$("#krogciKROGCIkrogciiiIII").html("");
 	});
 	$('#kroggii').change(function() {
 		$("#krogciKROGCIkrogciiiIII").html("");
