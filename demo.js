@@ -269,6 +269,7 @@ function getSessionId() {
 }
 
 var sloBMIbmi = sloBMI.data[0][1];
+
 function BmiIzracun() {
 	sessionId = getSessionId();
 
@@ -287,6 +288,7 @@ function BmiIzracun() {
 				var party = data.party;
 					//teza
 					$("#rezultatBMI").html("<br/><span>Oseba <b>" + party.firstNames + " " + party.lastNames +","+ "</b></span><br/><br/>");
+					$("#krogciKROGCIkrogciiiIII").html("");
 					$.ajax({
 					    url: baseUrl + "/view/" + ehrId + "/" + "weight",
 					    type: 'GET',
@@ -326,9 +328,9 @@ function BmiIzracun() {
 							}else if(BMI < 25){
 				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span>";
 							}else{
-				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span><div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div><div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";	
-				  		//	krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
-						//	krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
+				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span>";
+				  			krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
+							krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
 	
 				    }
 				   	$("#krogciKROGCIkrogciiiIII").append(krogciRes);
@@ -465,7 +467,7 @@ $(document).ready(function() {
 		$("#preberiSporocilo").html("");
 		$("#preberiEHRid").val($(this).val());
 		$("#rezultatBMI").html("")
-		$("#krogciKROGCIkrogciiiIII").html("");
+		//$("#krogciKROGCIkrogciiiIII").html("");
 	});
 	$('#kroggii').change(function() {
 		$("#krogciKROGCIkrogciiiIII").html("");
