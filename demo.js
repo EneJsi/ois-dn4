@@ -295,7 +295,6 @@ function BmiIzracun() {
 					    	if(res.length > 0) {
 					    		for(var i in res){
 						        weight = res[i].weight;
-						        console.log(weight + "na mestu" +i);
 					    		}
 						        console.log(weight + "To je teza nazadnje dodanega")
 					    	} 
@@ -316,9 +315,6 @@ function BmiIzracun() {
 						        height = res[0].height;
 					    	} 
 					BMI = (weight / (height*height) * 10000);
-					console.log(weight);
-					console.log(height);
-					console.log(BMI);
 					if(isNaN(BMI)){
 							$("#preberiSporocilo").html("<span class='obvestilo label label-danger fade-in'>Vnesite meritve telesne teže ter višine.");
 					}else{
@@ -333,8 +329,10 @@ function BmiIzracun() {
 				    }
 				   
 					$("#rezultatBMI").append(results);
+					if(true){
 					var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
 					krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" +sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" +BMI+"'' fill='red'></circle></svg></div></div></div>";
+					}
 					$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 					}
 					    },
