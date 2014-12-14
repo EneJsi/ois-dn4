@@ -315,6 +315,7 @@ function BmiIzracun() {
 						        height = res[0].height;
 					    	} 
 					BMI = (weight / (height*height) * 10000);
+					var krogciRes;
 					if(isNaN(BMI)){
 							$("#preberiSporocilo").html("<span class='obvestilo label label-danger fade-in'>Vnesite meritve telesne teže ter višine.");
 					}else{
@@ -326,11 +327,13 @@ function BmiIzracun() {
 				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span>";
 							}else{
 				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span>";
-				  
+				  			krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
+							krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
+	
 				    }
-				   
+				   	$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 					$("#rezultatBMI").append(results);
-					krogci();
+					
 					}
 					    },
 					    error: function() {
@@ -349,13 +352,6 @@ function BmiIzracun() {
 		});
 	
 					
-}
-
-function krogci(){
-	sessionId = getSessionId();
-		var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
-		krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
-		$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 }
 
 function kreirajEHRzaBolnika() {
