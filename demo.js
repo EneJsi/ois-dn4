@@ -324,11 +324,11 @@ function BmiIzracun() {
 					}else{
 					    var results = "BMI: " + BMI  + "<br>Povprečen slovenski BMI: " + sloBMI.data[0][1];
 							if(BMI < 18.5){
-					       		results += "<br><h1><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span></h1>";
+					       		results += "<br><h3><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span></h3>";
 							}else if(BMI < 25){
-				       			results += "<br><h1><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span></h1>";
+				       			results += "<br><h3><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span></h3>";
 							}else{
-				       			results += "<br><h1><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span></h1>";
+				       			results += "<br><h3><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span></h3>";
 				    }
 				   
 					$("#rezultatBMI").append(results);
