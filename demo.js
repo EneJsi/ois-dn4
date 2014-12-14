@@ -314,6 +314,7 @@ function BmiIzracun() {
 					    success: function (res) {
 					    	if (res.length > 0) {
 						        height = res[0].height;
+						        console.log(height);
 					    	} 
 					BMI = (weight / (height*height) * 10000);
 					var krogciRes = "";
