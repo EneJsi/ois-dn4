@@ -278,7 +278,6 @@ function BmiIzracun() {
 	if (!ehrId || ehrId.trim().length == 0) {
 		$("#preberiSporocilo").html("<span class='obvestilo label label-warning fade-in'>Prosim vnesite zahtevan podatek!");
 	} 
-
 		//party
 		$.ajax({
 			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
@@ -307,7 +306,6 @@ function BmiIzracun() {
 					    }
 					});		
 					//visina
-					
 					$.ajax({
 						url: baseUrl + "/view/" + ehrId + "/" + "height",
 					    type: 'GET',
@@ -325,15 +323,16 @@ function BmiIzracun() {
 					    var results = "BMI: " + BMI  + "<br>Povprečen slovenski BMI: " + sloBMI.data[0][1];
 							if(BMI < 18.5){
 					       		results += "<br><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase! Normalen BMI je med 18.5 in 25.</span>";
+					       		krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='"+ 1.5*25 +"' stroke='black' stroke-width='2' fill='red'></circle><circle cx='540' cy='60' r='"+ 1.5*18.5 +"' stroke='black' stroke-width='2' fill='red'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
 							}else if(BMI < 25){
 				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.! Normalen BMI je med 18.5 in 25.</span>";
+				       			krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='"+ 1.5*25 +"' stroke='black' stroke-width='2' fill='red'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle><circle cx='540' cy='60' r='"+ 1.5*18.5 +"' stroke='black' stroke-width='2' fill='red'></circle></svg></div></div></div>";
 							}else{
 				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase! Normalen BMI je med 18.5 in 25.</span>";
+				       			krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle><circle cx='540' cy='60' r='"+ 1.5*25 +"' stroke='black' stroke-width='2' fill='red'></circle><circle cx='540' cy='60' r='"+ 1.5*18.5 +"' stroke='black' stroke-width='2' fill='red'></circle></svg></div></div></div>";
 				    }
-				    	krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
 				   	$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 					$("#rezultatBMI").append(results);
-					
 					}
 					    },
 					    error: function() {
@@ -341,17 +340,12 @@ function BmiIzracun() {
 							console.log(JSON.parse(err.responseText).userMessage);
 					    }
 					});	
-					
-
-					
 	    	},
 	    	error: function(err) {
 	    		$("#preberiSporocilo").html("<span class='obvestilo label label-danger fade-in'>Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
 				console.log(JSON.parse(err.responseText).userMessage);
 	    	}
 		});
-	
-					
 }
 
 function kreirajEHRzaBolnika() {
