@@ -324,16 +324,16 @@ function BmiIzracun() {
 					}else{
 					    var results = "BMI: " + BMI  + "<br>Povprečen slovenski BMI: " + sloBMI.data[0][1];
 							if(BMI < 18.5){
-					       		results += "<br><h3><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span></h3>";
+					       		results += "<br><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span>";
 							}else if(BMI < 25){
-				       			results += "<br><h3><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span></h3>";
+				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span>";
 							}else{
-				       			results += "<br><h3><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span></h3>";
+				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span>";
 				    }
 				   
 					$("#rezultatBMI").append(results);
 					var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'>Slovenija in vi</div></div></div>";				
-					krogciRes += "<div class='panel-body text-center'><svg width='120' height='120'><circle r='" + BMI*2 +"'></circle><circle r='" + sloBMI*2 + "'></circle></svg></div></div></div>";
+					krogciRes += "<div class='panel-body text-center'><svg width='120' height='120'><circle r='" +BMI*2+"'></circle></svg></div></div></div>";
 					$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 					
 					
