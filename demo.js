@@ -268,7 +268,7 @@ function getSessionId() {
     return response.responseJSON.sessionId;
 }
 
-
+var sloBMIbmi = sloBMI.data[0][1];
 function BmiIzracun() {
 	sessionId = getSessionId();
 
@@ -318,7 +318,7 @@ function BmiIzracun() {
 					if(isNaN(BMI)){
 							$("#preberiSporocilo").html("<span class='obvestilo label label-danger fade-in'>Vnesite meritve telesne teže ter višine.");
 					}else{
-						var sloBMIbmi = sloBMI.data[0][1];
+						
 					    var results = "BMI: " + BMI  + "<br>Povprečen slovenski BMI: " + sloBMI.data[0][1];
 							if(BMI < 18.5){
 					       		results += "<br><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span>";
@@ -326,12 +326,11 @@ function BmiIzracun() {
 				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span>";
 							}else{
 				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span>";
-				  	var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
-					krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
+				  
 				    }
 				   
 					$("#rezultatBMI").append(results);
-					$("#krogciKROGCIkrogciiiIII").append(krogciRes);
+					krogci();
 					}
 					    },
 					    error: function() {
@@ -352,7 +351,11 @@ function BmiIzracun() {
 					
 }
 
-
+function krogci(){
+		var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi</b></div></div></div>";				
+		krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
+		$("#krogciKROGCIkrogciiiIII").append(krogciRes);
+}
 
 function kreirajEHRzaBolnika() {
 	sessionId = getSessionId();
