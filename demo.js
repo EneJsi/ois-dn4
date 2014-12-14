@@ -315,7 +315,7 @@ function BmiIzracun() {
 						        height = res[0].height;
 					    	} 
 					BMI = (weight / (height*height) * 10000);
-					var krogciRes;
+					var krogciRes = "";
 					if(isNaN(BMI)){
 							$("#preberiSporocilo").html("<span class='obvestilo label label-danger fade-in'>Vnesite meritve telesne teže ter višine.");
 					}else{
