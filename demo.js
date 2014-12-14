@@ -293,10 +293,12 @@ function BmiIzracun() {
 					    headers: {"Ehr-Session": sessionId},
 					    success: function (res) {
 					    	if(res.length > 0) {
-					    		for(var i in res){
-						        weight = res[i].weight;
-					    		}
+					    	
+					    	
+					    	
+					   			
 					    		weight = res[0].weight;
+					    		console.log(weight);
 					    	} 
 					    },
 					    error: function() {
