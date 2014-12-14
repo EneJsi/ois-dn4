@@ -469,6 +469,9 @@ $(document).ready(function() {
 		$("#rezultatBMI").html("")
 		$("#krogciKROGCIkrogciiiIII").html("");
 	});
+	$('#kroggii').change(function() {
+		$("#krogciKROGCIkrogciiiIII").html("");
+	});
 	$('#preberiObstojeciVitalniZnak').change(function() {
 		$("#dodajMeritveVitalnihZnakovSporocilo").html("");
 		var podatki = $(this).val().split("|");
