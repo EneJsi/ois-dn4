@@ -333,7 +333,7 @@ function BmiIzracun() {
 				   
 					$("#rezultatBMI").append(results);
 					var krogciRes = "<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'>Slovenija in vi</div></div></div>";				
-					krogciRes += "<div class='panel-body'><svg><circle r='" + BMI*2 +"'></circle><circle r='" + sloBMI + "'></circle></svg></div></div></div>";
+					krogciRes += "<div class='panel-body text-center'><svg><circle r='" + BMI*2 +"'></circle><circle r='" + sloBMI + "'></circle></svg></div></div></div>";
 					$("#krogciKROGCIkrogciiiIII").append(krogciRes);
 					
 					
