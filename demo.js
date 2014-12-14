@@ -286,7 +286,7 @@ function BmiIzracun() {
 				var party = data.party;
 					//teza
 					$("#rezultatBMI").html("<br/><span>Oseba <b>" + party.firstNames + " " + party.lastNames +","+ "</b></span><br/><br/>");
-					$("#krogciKROGCIkrogciiiIII").html("<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi.</b>Črna krogra predstavljata meje za normalno telesno težo.</div></div></div>");
+					$("#krogciKROGCIkrogciiiIII").html("<div class='col-lg-6 col-md-6 col-sm-6'><div class='panel panel-default'><div class='panel-heading'><div class='row'><div class='col-lg-6 col-md-6 col-sm-6'><b><font color='blue'</font>Slovenija <font color='black'</font>in <font color='red'</font>vi.</b><font color='black'</font>Znotraj črnih krogov je normalna telesna teža.</div></div></div>");
 					$.ajax({
 					    url: baseUrl + "/view/" + ehrId + "/" + "weight",
 					    type: 'GET',
