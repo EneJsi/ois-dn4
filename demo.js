@@ -324,11 +324,11 @@ function BmiIzracun() {
 						
 					    var results = "BMI: " + BMI  + "<br>Povprečen slovenski BMI: " + sloBMI.data[0][1];
 							if(BMI < 18.5){
-					       		results += "<br><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase!</span>";
+					       		results += "<br><span class='label label-danger'>Imate prenizko telesno težo. Bolje morate skrbeti zase! Normalen BMI je med 18.5 in 25.</span>";
 							}else if(BMI < 25){
-				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.!</span>";
+				       			results += "<br><span class='label label-success'>Čestitam. Lepo skrbite za svojo težo.! Normalen BMI je med 18.5 in 25.</span>";
 							}else{
-				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase!</span>";
+				       			results += "<br><span class='label label-danger'>Imate prekomerno telesno težo. Bolje morate skrbeti zase! Normalen BMI je med 18.5 in 25.</span>";
 				    }
 				    	krogciRes += "<div class='panel-body text-center'><svg width='720' height='120'><circle cx='180' cy='60' r='" + 1.5*sloBMIbmi+"' fill='blue'></circle><circle cx='540' cy='60' r='" + 1.5*BMI+"'' fill='red'></circle></svg></div></div></div>";
 				   	$("#krogciKROGCIkrogciiiIII").append(krogciRes);
