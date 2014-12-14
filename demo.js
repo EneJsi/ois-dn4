@@ -296,6 +296,7 @@ function BmiIzracun() {
 					    		for(var i in res){
 						        weight = res[i].weight;
 					    		}
+					    		weight = res[0].weight;
 					    	} 
 					    },
 					    error: function() {
